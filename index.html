@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
         <div class="heart-photo">
           <!-- Replace us.jpg inside static/images/ with your own photo -->
           <img
-            src="{{ url_for('static', filename='images/us.jpg') }}"
+            src="./images/us.jpg"
             alt="A photo of us"
             onerror="this.style.display='none'; this.parentElement.classList.add('photo-missing');"
           >
@@ -197,6 +197,6 @@
     </div>
   </div>
 
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
