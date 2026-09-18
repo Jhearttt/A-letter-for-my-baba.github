@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f9d7e3">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Good Luck, My Love ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+  <div id="petal-layer" aria-hidden="true"></div>
+
+  <!-- ================= COVER PAGE ================= -->
+  <section id="cover-page" class="page cover-page is-active">
+    <div class="cover-content">
+
+      <div class="heart-photo-wrap" aria-label="Our photo">
+        <div class="heart-photo">
+          <!-- Replace us.jpg inside static/images/ with your own photo -->
+          <img
+            src="{{ url_for('static', filename='images/us.jpg') }}"
+            alt="A photo of us"
+            onerror="this.style.display='none'; this.parentElement.classList.add('photo-missing');"
+          >
+          <span class="photo-fallback">♡</span>
+        </div>
+      </div>
+
+      <p class="eyebrow">a little something for</p>
+
+      <h1>My Favorite Player, My Boyfriend</h1>
+
+      <p class="cover-subtitle">
+        From someone who wishes she could be there cheering beside you.
+      </p>
+
+      <button id="open-letter-btn" class="primary-button" type="button">
+        💌 Open my letter
+      </button>
+
+      <p class="tiny-note">
+        ♡
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= LETTER PAGE ================= -->
+  <section id="letter-page" class="page letter-page" aria-hidden="true">
+    <div class="letter-stage">
+
+      <div id="envelope" class="envelope">
+
+        <div class="envelope-back"></div>
+
+        <!-- REALISTIC TWO-HALF LETTER -->
+        <article id="letter-sheet" class="letter-sheet">
+
+          <div class="sheet-half sheet-top">
+            <div class="paper-face paper-face-top"></div>
+          </div>
+
+          <div class="sheet-half sheet-bottom">
+            <div class="paper-face paper-face-bottom"></div>
+          </div>
+
+          <div class="letter-content-shell">
+            <div id="letter-content" class="letter-content">
+              <span class="paper-flower flower-left">🌸</span>
+              <span class="paper-flower flower-right">🌷</span>
+
+              <p class="letter-date">For tournament day ♡</p>
+
+              <h2>To my favorite person, baba boo.</h2>
+
+              <div class="letter-body">
+                <p>
+                  I know this tourna feels a lil bit different because I got used to seeing you play (in person), lowkey cheering for
+                  you, buy you your legendary 2L pocari sweat drink, and being there with you for the little moments before and after your games.
+                  But sadly, I cannot be there with you in person this time. Aaaoohhnaaoooo 😔
+                </p>
+
+                <p>
+                  So I made this digital letter instead hehehe :> A tiny place on the internet where a piece of me can
+                  still come with you mwehehehe. (in short, wala kang takas sa akin. Awsus)
+                </p>
+
+                <p>
+                  Baba boo, when the game starts, I hope you remember that you have already done the hard part.
+                  You trained, you showed up, and you chose to compete. I know you already know what to feel and think before you play, but let me say this: 
+                  Trust what you know. Trust your body. Trust your instincts. You do your best like you usually do. Most importantly, PRAY 😁🙏🏻
+                
+                </p>
+
+                <p>
+                  And whether today gives you a win, a lesson, a medal, a funny story,
+                  or all of those at once, I will still be sosososo proud of you! Not just because of the score,
+                  but because I know how much heart and effort you put into what you do.
+                </p>
+
+                <p>
+                  I wish I could be there internally screaming for you like I usually do every time I watch your game. Since I cannot,
+                  imagine me somewhere in the crowd quietly watching your game and quietly cheering for you.
+                  Because I definitely am. 
+                </p>
+
+                <p>
+                  Good luck, my baba boo, my loml, my baby, my Ralph Gmuel. Just enjoy the game and please remember
+                  that no matter how far away you are, you still have someone here cheering
+                  for you with her whole heart. I love love youuu, babaaa!
+                </p>
+              </div>
+
+              <div class="signature">
+                <span>Always cheering for you,</span>
+                <strong>Your biggest supporter ♡</strong>
+              </div>
+
+              <button id="done-btn" class="primary-button full-width" type="button">
+                Done reading ♡
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <div class="heart-seal">♡</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL SUPPORT PAGE ================= -->
+  <section id="support-page" class="page support-page" aria-hidden="true">
+    <div class="support-card">
+
+      <div class="sparkle-row">✨ 🌸 ✨ 🌷 ✨</div>
+
+      <div class="support-box">
+        <p class="eyebrow">emergency boyfriend support button</p>
+        <h2>Nervous before the game?</h2>
+        <p class="support-copy">Press this whenever you need a little extra courage from me 🥹</p>
+        <p class="support-copy">Pero feel ko you don't need this since i think you won't feel nervous na (i mean ikaw na gid na eh syieeh)</p>
+
+        <button id="emergency-btn" class="primary-button" type="button">
+          Click me if you're nervous 🩷
+        </button>
+      </div>
+
+      <div class="final-message">
+        <h2>Go make yourself proud, Baba Boo!</h2>
+        <p class="support-copy">
+          Just do your best and enjoy the game! yihaaay!<br>
+          I am cheering for you and will 4ever be proud of u! Mwaaa!
+        </p>
+
+
+        
+      </div>
+
+      <div class="nav-buttons">
+        <button id="back-to-letter-btn" class="secondary-button" type="button">
+          ← Back to letter
+        </button>
+
+        <button id="back-to-cover-btn" class="secondary-button" type="button">
+          Back to cover ♡
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= EMERGENCY MODAL ================= -->
+  <div id="emergency-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button id="close-modal-btn" class="modal-close" type="button">×</button>
+
+      <div class="big-heart">🩷</div>
+      <p>Hey, Baba.</p>
+      <h3>You’ve been looking forward to this.</h3>
+      <p>Trust yourself, okiii?</p>
+      <p>
+        Whatever the result is, someone back home is ridiculously proud of you.
+      </p>
+      <strong>Now go show them what you can do. Show them how Ralph Gmuel plays his game. Daaamnnn 🔥🔥🔥</strong>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
